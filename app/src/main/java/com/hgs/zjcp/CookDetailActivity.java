@@ -22,6 +22,7 @@ import butterknife.ButterKnife;
 
 /**
  * Created by hgs on 2016/10/31.
+ *
  */
 public class CookDetailActivity extends BaseActivity {
     @BindView(R.id.cook_title)
