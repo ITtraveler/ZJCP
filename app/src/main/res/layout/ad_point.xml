@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/radio"
+    style="@style/RadioButton"
+    android:layout_width="wrap_content"
+    android:drawableLeft="@drawable/ic_point"
+    android:padding="8dp" />

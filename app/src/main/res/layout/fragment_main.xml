@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_AD_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorBackground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="120dp"
+        android:orientation="horizontal">
+
+        <EditText
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorWhiteAlpha"
+            android:hint="输入菜名"
+            android:padding="6dp" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/main_rg_adPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </RadioGroup>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        app:cardCornerRadius="16dp"
+        app:contentPadding="16dp">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/main_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarThumbVertical="@color/colorBackground"
+                android:scrollbarSize="3dp"
+                android:scrollbarStyle="outsideInset"
+                >
+
+                <LinearLayout
+                    android:id="@+id/main_guanmo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/guanmo_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="怎么做一道好吃的三色炒虾仁"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/guanmo_showImg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/colorBackground" />
+
+                        <TextView
+                            android:id="@+id/guanmo_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:layout_margin="8dp"
+                            android:background="@color/colorBackground"
+                            android:ems="1"
+                            android:gravity="center"
+                            android:text="三色炒虾仁"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/guanmo_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"/>
+
+                    <TextView
+                        android:id="@+id/guanmo_ingredients"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/guanmo_step"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </ScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
