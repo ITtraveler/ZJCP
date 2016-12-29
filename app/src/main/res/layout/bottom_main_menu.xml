@@ -15,31 +15,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:drawableTop="@mipmap/ic_launcher"
-            android:text="主页" />
+            android:drawableTop="@drawable/rb_ic_main"
+            android:text="@string/bottom_main" />
 
         <RadioButton
             android:id="@+id/bottom_rb_menu"
             style="@style/RadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableTop="@mipmap/ic_launcher"
-            android:text="菜谱" />
+            android:drawableTop="@drawable/rb_ic_menu"
+            android:text="@string/bottom_menu" />
 
         <RadioButton
             android:id="@+id/bottom_rb_choice"
             style="@style/RadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableTop="@mipmap/ic_launcher"
-            android:text="精选" />
+
+            android:drawableTop="@drawable/rb_ic_choice"
+            android:text="@string/bottom_choice" />
 
         <RadioButton
             android:id="@+id/bottom_rb_mine"
             style="@style/RadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableTop="@mipmap/ic_launcher"
-            android:text="我的" />
+            android:drawableTop="@drawable/rb_ic_mine"
+            android:text="@string/bottom_mine" />
     </RadioGroup>
 </LinearLayout>

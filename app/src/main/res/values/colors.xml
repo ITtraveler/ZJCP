@@ -11,5 +11,11 @@
     <color name="colorRed">#fd0101</color>
     <color name="colorBlack">#000000</color>
     <color name="colorBoard">#faab01</color>
-    <color name="colorStatusBar">#22000000</color>
+    <color name="colorStatusBar">#00ffffff</color>
+    <!--snackBar color-->
+    <color name="colorSnackBarBg">#ffffff</color>
+    <color name="colorSnackBarText">#969696</color>
+
+    <!--unite gray-->
+    <color name="colorGray">#cfd0d2</color>
 </resources>

@@ -18,7 +18,10 @@ import okhttp3.OkHttpClient;
  * Created by Administrator on 2016/10/26.
  */
 public class MyApplication extends Application {
-    public static final String MOBKEY = "17a5cdcafeca8";
+    public static final String MOB_KEY = "17a5cdcafeca8";
+    public static final String JUHE_KEY = "ef17b34b19971e308690ae8ed333ea04";
+
+    //广告
     public static String[] ADURIS = {"http://file.weixinkd.com/article_201610_20_20w_58082edd0bdea.jpg",
             "http://site.meishij.net/p2/20161020/20161020140319_605.png",
             "http://site.meishij.net/p2/20161020/20161020140320_417.png",
@@ -51,7 +54,6 @@ public class MyApplication extends Application {
         screenWidth = dm.widthPixels;
         screenHeight = dm.heightPixels;
     }
-
 
 
 }

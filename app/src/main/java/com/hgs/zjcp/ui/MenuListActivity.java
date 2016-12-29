@@ -1,10 +1,8 @@
-package com.hgs.zjcp;
+package com.hgs.zjcp.ui;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.annotation.TargetApi;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -16,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.hgs.zjcp.R;
 import com.hgs.zjcp.data.MobCookDetail;
 import com.hgs.zjcp.data.MobMenuCategory;
 import com.hgs.zjcp.listener.NetLoadingListener;
@@ -31,6 +30,7 @@ import butterknife.ButterKnife;
 
 /**
  * Created by hgs on 2016/10/30.
+ * 菜谱类表
  */
 
 public class MenuListActivity extends BaseActivity implements NetLoadingListener {
@@ -111,7 +111,9 @@ public class MenuListActivity extends BaseActivity implements NetLoadingListener
         if (kuid == NetAction.KUID_MENU_LIST) {
             //mSwipeFresh.setRefreshing(false);
             mRecycleAdapter.notifyDataSetChanged();
+            //取消下拉的动画
             mSwipeFlash.setRefreshing(false);
+            //取消上拉的动画
             cancelUpLoadingAnim();
             if (loadingLayout != null)
                 loadingLayout.setVisibility(View.GONE);

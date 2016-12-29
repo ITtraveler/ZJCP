@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">指尖菜谱</string>
+    <string name="bottom_main">主页</string>
+    <string name="bottom_menu">菜谱</string>
+    <string name="bottom_choice">精选</string>
+    <string name="bottom_mine">我的</string>
 </resources>

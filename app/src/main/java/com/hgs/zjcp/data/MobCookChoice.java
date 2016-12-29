@@ -5,6 +5,8 @@ import java.util.Arrays;
 /**
  * Created by hgs on 2016/11/16.
  * cook新闻封装类
+ *
+ * 废弃
  */
 public class MobCookChoice {
     private String msg;

@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.hgs.zjcp.MenuListActivity;
+import com.hgs.zjcp.ui.MenuListActivity;
 import com.hgs.zjcp.R;
 import com.hgs.zjcp.adapter.MyGridAdapter;
 import com.hgs.zjcp.data.MobMenuCategory;
@@ -28,7 +28,7 @@ import butterknife.ButterKnife;
  */
 public class MenuFragment extends BaseFragment {
     private static MenuFragment menuFragment;
-
+    //数据
     private List<MobMenuCategory> menuCategoryList;
 
     public static MenuFragment newInstance() {

@@ -1,4 +1,4 @@
-package com.hgs.zjcp;
+package com.hgs.zjcp.ui;
 
 import android.graphics.Color;
 import android.os.Build;
@@ -9,6 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.hgs.zjcp.R;
 
 /**
  * Created by hgs on 2016/11/8.

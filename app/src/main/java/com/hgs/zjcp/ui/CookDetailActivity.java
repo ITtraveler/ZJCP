@@ -1,14 +1,14 @@
-package com.hgs.zjcp;
+package com.hgs.zjcp.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.hgs.zjcp.R;
 import com.hgs.zjcp.data.MobCookDetail;
 import com.hgs.zjcp.data.MobCookRecipe;
 import com.hgs.zjcp.data.MobMethod;

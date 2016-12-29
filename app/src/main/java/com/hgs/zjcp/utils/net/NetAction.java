@@ -3,11 +3,13 @@ package com.hgs.zjcp.utils.net;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.util.ArrayMap;
 import android.widget.ImageView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.hgs.zjcp.R;
+import com.hgs.zjcp.data.JuheWXChoice;
 import com.hgs.zjcp.data.MobCookDetail;
 import com.hgs.zjcp.data.MobCookChoice;
 import com.hgs.zjcp.data.MobMenuList;
@@ -113,7 +115,7 @@ public class NetAction {
      */
     public void getRandomCook(final MobCook mobCook) {
         Map<String, String> param = new HashMap<>();
-        param.put("key", MyApplication.MOBKEY);
+        param.put("key", MyApplication.MOB_KEY);
         param.put("id", randomMenuId());//随机产生一个菜单MOB的ID
         NetUtils.get(NetUri.MOBCook.COOK_ID_QUERY, param, new StringCallback() {
             @Override
@@ -212,7 +214,7 @@ public class NetAction {
 
     public void getMenuList(String cid, int page, final List<MobCookDetail> mobCookDetails) {
         Map<String, String> param = new HashMap<>();
-        param.put("key", MyApplication.MOBKEY);
+        param.put("key", MyApplication.MOB_KEY);
         param.put("cid", cid);
         param.put("page", "" + page);//加载第几页
         param.put("size", "" + 20);//设置每次只加载20条
@@ -243,7 +245,7 @@ public class NetAction {
      */
     public void getCookChoice(String page, final List<MobCookChoice.Choice> choice) {
         Map<String, String> param = new HashMap<>();
-        param.put("key", MyApplication.MOBKEY);
+        param.put("key", MyApplication.MOB_KEY);
         param.put("cid", "27");
         param.put("page", page);
         param.put("size", "20");
@@ -264,4 +266,29 @@ public class NetAction {
         });
     }
 
+    /**
+     * 聚合接口提供的微信精选api
+     *
+     * @param page
+     * @param choice
+     */
+    public void getJuheWXChoice(String page, final List<JuheWXChoice.Content> choice) {
+        Map<String, String> param = new HashMap<>();
+        param.put("key", "" + MyApplication.JUHE_KEY);
+        param.put("pno", "" + page);//第几页
+        NetUtils.get(NetUri.JUHE.WEIXIN_CHOICE, param, new StringCallback() {
+            @Override
+            public void onError(Call call, Exception e, int i) {
+
+            }
+
+            @Override
+            public void onResponse(String s, int i) {
+                Gson gson = new Gson();
+                JuheWXChoice juheWXChoice = gson.fromJson(s, JuheWXChoice.class);
+                choice.addAll(juheWXChoice.getResult().getList());
+                netLoadings.get(KUID_CHOICE_LIST).netLoadingComp(KUID_CHOICE_LIST);
+            }
+        });
+    }
 }

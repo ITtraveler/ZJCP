@@ -2,17 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorWhite"
+    android:background="@color/colorPrimary"
     android:gravity="center"
-    android:paddingTop="30dp"
+    android:orientation="horizontal"
     android:paddingBottom="15dp"
-    android:orientation="horizontal">
+    android:paddingTop="30dp">
+
     <TextView
         android:id="@+id/main_bar_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textStyle="bold"
+        android:text="指尖菜谱"
+        android:textColor="@color/colorWhite"
         android:textSize="18dp"
-        android:text="指尖菜谱" />
+        android:textStyle="bold" />
 </LinearLayout>

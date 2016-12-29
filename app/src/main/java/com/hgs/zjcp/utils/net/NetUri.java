@@ -16,8 +16,14 @@ public class NetUri {
         public static final String COOK_ID_QUERY = MOB_COOK_URL + "/menu/query";
     }
 
+    /**
+     * 由于内容不够丰富决定废弃，改由聚合数据提供的微信精选
+     */
     //get  json  key=123456&cid=1 &&page=1&&size=100  page从1开始；cid类别id，这里固定为{"cid":"27","name":"美食"}   微信精选接口
     public static final String WEIXIN_CHOICE = "http://apicloud.mob.com/wx/article/search";
 
-
+    class JUHE{
+        //http://v.juhe.cn/weixin/query?key=您申请的KEY&
+        public static final String WEIXIN_CHOICE = "http://v.juhe.cn/weixin/query";
+    }
 }
